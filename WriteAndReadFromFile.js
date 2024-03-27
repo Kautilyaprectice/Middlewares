@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/add-product',(req, res, next) => {
     console.log("In another middleware");
-    res.send('<form action="/product" method="POST">Product:<input type="text" name="title">Size:<input type="num" name="size"><button type="submit">Add Product</button></form>');
+    res.send('<form action="/product" method="POST">Product:<input type="text" name="title">Size:<input type="number" name="size"><button type="submit">Add Product</button></form>');
 });
 
 app.post('/product',(req, res, next) => {
